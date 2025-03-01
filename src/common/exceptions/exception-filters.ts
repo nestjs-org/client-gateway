@@ -6,8 +6,7 @@ export class RpcCustonExceptionFilter implements ExceptionFilter {
     catch(exception: RpcException, host: ArgumentsHost) {
         const response: Response =  host.switchToHttp().getResponse();
         const statusCode = response.statusCode;
-        console.log(exception.getError())
-        const handleEmptyResponseException = exception.getError().toString().match(/\(/);
+        const handleEmptyResponseException = 'getError' in exception ? exception.getError().toString().match(/\(/) : false
         let error;
         if(handleEmptyResponseException) response.status(500).send({
             errorStatus: HttpStatus.BAD_REQUEST,
