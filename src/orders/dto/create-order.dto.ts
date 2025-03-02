@@ -3,8 +3,6 @@ import { ArrayMinSize, IsArray, IsString, ValidateNested  } from "class-validato
 import { Type } from "class-transformer";
 import { OrderItemDto } from "./order-item.dto";
 export class CreateOrderDto {
-    @IsString()
-    stripeId: string;
     
     @IsArray()
     @ArrayMinSize(1)
