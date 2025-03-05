@@ -5,8 +5,6 @@ import { Logger, ValidationPipe } from '@nestjs/common';
 import { RpcCustonExceptionFilter } from './common/exceptions/exception-filters';
 async function bootstrap() {
   const logger = new Logger();
-  console.log('see changes from products_launcher')
-  console.log('see changes from products_launcher')
   const app = await NestFactory.create(AppModule)
   app.setGlobalPrefix('api')
   app.useGlobalPipes(new ValidationPipe({
