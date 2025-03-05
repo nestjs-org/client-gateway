@@ -5,7 +5,7 @@ steps:
       [
         "build",
         "-t",
-        "XXXXX-docker.pkg.dev/project-name/registry/image-name",
+        "us-east4-docker.pkg.dev/microservices-curso-452723/repositorio-google-image-registry/client-gateway",
         "-f",
         "dockerfile.prod",
         "--platform=linux/amd64",
@@ -15,7 +15,7 @@ steps:
     args:
       [
         "push",
-        "XXXXX-docker.pkg.dev/project-name/registry/image-name",
+        "us-east4-docker.pkg.dev/microservices-curso-452723/repositorio-google-image-registry/client-gateway",
       ]
 options:
   defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET
