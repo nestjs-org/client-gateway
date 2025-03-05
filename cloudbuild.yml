@@ -17,3 +17,5 @@ steps:
         "push",
         "XXXXX-docker.pkg.dev/project-name/registry/image-name",
       ]
+options:
+  defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET
